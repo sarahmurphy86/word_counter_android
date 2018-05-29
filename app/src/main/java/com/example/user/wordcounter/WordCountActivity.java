@@ -26,13 +26,11 @@ public class WordCountActivity extends AppCompatActivity {
     }
 
     public void onCalculateButtonClicked(View button){
-        String answer = enterText.getText().toString();
+
+        String sentence = enterText.getText().toString();
         WordCount wordCount = new WordCount();
-        String answer = wordCount.splitInputIntoSeparateWords(answer);
-        Integer.toString(answer)
-        answerText.setText(answer);
-
-
+        Integer answer = wordCount.splitInputIntoSeparateWords(sentence);
+        answerText.setText(answer.toString());
     }
 
 }
